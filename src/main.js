@@ -37,3 +37,5 @@ document.addEventListener("click", () => {
     modal.classList.add("hidden");
   }
 });
+console.log("JavaScript is working!");
+
