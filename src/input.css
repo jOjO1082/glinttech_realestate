@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .icon-container {
+    @apply w-fit hover:bg-slate-50 rounded-xl p-2 transition hover:shadow-lg hover:scale-110 hover:text-primary-900 cursor-pointer;
+  }
+
+}
