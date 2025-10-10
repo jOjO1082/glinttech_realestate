@@ -5,6 +5,14 @@
 @layer components {
   .icon-container {
     @apply w-fit hover:bg-slate-50 rounded-xl p-2 transition hover:shadow-lg hover:scale-110 hover:text-primary-900 cursor-pointer;
-  }
+  };
+  .primary-button {
+    @apply w-full h-auto bg-mainSecondary-400 rounded-lg font-medium text-center px-12 py-4  hover:bg-mainSecondary-300 transition hover:shadow-lg  hover:text-primary-900 cursor-pointer md:w-fit md:px-12 md:py-4;
+  };
+  .secondary-button {
+    @apply w-full h-auto border rounded-lg font-medium text-center px-12 py-3 hover:bg-slate-50 transition hover:shadow-lg   hover:text-primary-900 cursor-pointer md:w-fit md:px-12 md:py-4;
+  };
+
+
 
 }

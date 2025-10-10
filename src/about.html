@@ -97,7 +97,7 @@
 
       <!-- Navigation -->
       <div
-        class="main-nav bg-transparent w-full h-auto px-4 py-20 flex flex-row justify-between items-center gap-6 lg:px-28 md:px-8"
+        class="main-nav bg-transparent w-full h-auto px-4 pt-20 pb-4 flex flex-row justify-between items-center gap-6 lg:px-28 md:px-8 bg-white-50"
       >
         <div
           class="desktop-nav w-full h-auto flex flex-row justify-between items-center"
@@ -199,12 +199,433 @@
       </div>
 
       <!-- Hero Section -->
+      <section
+        class="about-hero bg-about-hero py-12 text-white-50 w-full h-auto px-4 flex flex-col justify-center items-center gap-8"
+      >
+        <!-- Hero Text -->
+        <div
+          class="about-hero-text w-full h-auto flex flex-col justify-center items-center gap-4"
+        >
+          <h1 class="text-2xl font-bold md:text-4xl">
+            About <span class="text-mainSecondary-400">Us</span>
+          </h1>
+          <p class="font-normal text-base md:text-2xl">
+            Get to know more about HOUSEPLUG
+          </p>
+        </div>
 
-      <!-- Properties Section  -->
+        <!-- Buttons -->
+        <div
+          class="about-buttons-container w-full h-auto flex flex-col justify-center items-center gap-4 md:flex-row"
+        >
+          <div class="secondary-button">
+            <a href="contact.html">Contact us</a>
+          </div>
 
-      <!-- Pagination -->
+          <div class="primary-button">
+            <a href="listed-properties.html">Get Property</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Discover Section  -->
+      <section
+        class="discover-section w-full h-auto flex flex-col-reverse justify-center items-center gap-8 px-4 py-12 md:px-8 md:justify-start md:items-start lg:flex-row lg:px-[100px] lg:h-auto lg:items-stretch"
+      >
+        <!-- Discover images -->
+        <div
+          class="discover-images w-full h-auto flex flex-col justify-center items-center gap-4 lg:flex-row lg:items-stretch lg:justify-start"
+        >
+          <div
+            class="right-images w-full h-auto flex flex-col justify-center items-center gap-4 lg:flex-row lg:justify-start lg:items-start"
+          >
+            <div
+              class="one w-full h-auto flex flex-col justify-center items-center gap-4 lg:w-[25%]"
+            >
+              <img
+                src="/src/images/florian-schmidinger-b_79nOqf95I-unsplash.jpg"
+                alt=""
+                class="w-full h-40 object-cover rounded-lg md:h-80 lg:h-60"
+              />
+              <img
+                src="/src/images/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg"
+                alt=""
+                class="w-full h-40 object-cover rounded-lg md:h-80 lg:h-40"
+              />
+            </div>
+
+            <div class="two one w-full h-auto flex-col justify-center items-center gap-4 lg:w-[50%] lg:h-full lg:justify-start lg:items-stretch hidden md:hidden lg:flex">
+              <img
+                src="/src/images/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg"
+                alt=""
+                class="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+
+            <div class="three w-full h-auto flex-col justify-center items-center gap-4 lg:w-[25%] lg:h-full lg:justify-end lg:items-stretch hidden md:hidden lg:flex">
+              <img
+                src="/src/images/florian-schmidinger-b_79nOqf95I-unsplash.jpg"
+                alt=""
+                class="w-full h-20 object-cover rounded-lg lg:h-40"
+              />
+              <img
+                src="/src/images/alejandra-cifre-gonzalez-ylyn5r4vxcA-unsplash.jpg"
+                alt=""
+                class="w-full h-48 object-cover rounded-lg lg:h-60"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- discover text -->
+        <div
+          class="discover-text-and-details-container w-full h-auto flex flex-col justify-center items-center gap-4 md:justify-start md:items-start"
+        >
+          <!-- header -->
+          <div
+            class="text-header-discover w-full h-auto flex flex-col justify-center items-center gap-2 md:justify-start md:items-start"
+          >
+            <h2
+              class="font-bold text-2xl text-center md:text-start md:text-3xl lg:text-5xl"
+            >
+              Discover
+              <span class="text-mainSecondary-400">Verified</span> Luxury
+              Properties With Full Amenities.
+            </h2>
+            <p
+              class="text-center font-normal text-base md:text-start md:text-[18px]"
+            >
+              We connect you to real and authentic homes — no scams, no
+              shortcuts. Just trusted listings you can count on
+            </p>
+          </div>
+
+          <!-- Details -->
+          <div
+            class="discover-detials-cards w-full h-auto flex flex-row flex-wrap justify-between items-center gap-2"
+          >
+            <div
+              class="discover-details-card w-[48%] h-auto p-2 rounded-lg flex flex-col justify-start items-start gap-2 hover:bg-white-50 transition-all delay-75 ease-in md:p-8 md:gap-8"
+            >
+              <div class="icon-container bg-slate-50 rounded-xl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="card-title-and-details w-full h-auto flex flex-col justify-start items-start gap-2"
+              >
+                <h3 class="font-bold text-base md:text-[24px]">
+                  Quality Services
+                </h3>
+                <p class="text-xs font-normal text-slate-700 md:text-[18px] leading-6">
+                  Deals with issues in the exhaust system, ensuring
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="discover-details-card w-[48%] h-auto p-2 rounded-lg flex flex-col justify-start items-start gap-2 hover:bg-white-50 transition-all delay-75 ease-in md:p-8 md:gap-8"
+            >
+              <div class="icon-container bg-slate-50 rounded-xl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="card-title-and-details w-full h-auto flex flex-col justify-start items-start gap-2"
+              >
+                <h3 class="font-bold text-base md:text-[24px]">
+                  Quality Services
+                </h3>
+                <p class="text-xs font-normal text-slate-700 md:text-[18px] leading-6">
+                  Deals with issues in the exhaust system, ensuring
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="discover-details-card w-[48%] h-auto p-2 rounded-lg flex flex-col justify-start items-start gap-2 hover:bg-white-50 transition-all delay-75 ease-in md:p-8 md:gap-8"
+            >
+              <div class="icon-container bg-slate-50 rounded-xl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="card-title-and-details w-full h-auto flex flex-col justify-start items-start gap-2"
+              >
+                <h3 class="font-bold text-base md:text-[24px]">
+                  Quality Services
+                </h3>
+                <p class="text-xs font-normal text-slate-700 md:text-[18px] leading-6">
+                  Deals with issues in the exhaust system, ensuring
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="discover-details-card w-[48%] h-auto p-2 rounded-lg flex flex-col justify-start items-start gap-2 hover:bg-white-50 transition-all delay-75 ease-in md:p-8 md:gap-8"
+            >
+              <div class="icon-container bg-slate-50 rounded-xl">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
+                  />
+                </svg>
+              </div>
+
+              <div
+                class="card-title-and-details w-full h-auto flex flex-col justify-start items-start gap-2"
+              >
+                <h3 class="font-bold text-base md:text-[24px]">
+                  Quality Services
+                </h3>
+                <p class="text-xs font-normal text-slate-700 md:text-[18px] leading-6">
+                  Deals with issues in the exhaust system, ensuring
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to action -->
+          <div
+            class="consulting w-full h-auto flex flex-col justify-center items-center gap-4 md:flex-row md:justify-between md:items-center md:w-full"
+          >
+            <!-- Text -->
+            <div
+              class="consulting-text w-full h-auto flex flex-row justify-start items-start gap-2 md:flex-row md:justify-start md:items-center md:gap-4"
+            >
+              <div class="icon-container bg-white-50">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-address-book"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z"
+                  />
+                  <path d="M10 16h6" />
+                  <path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                  <path d="M4 8h3" />
+                  <path d="M4 12h3" />
+                  <path d="M4 16h3" />
+                </svg>
+              </div>
+
+              <div
+                class="consult-details w-full flex flex-col justify-start items-start gap-2 md:w-fit"
+              >
+                <h4 class="font-bold text-base md:text-[18px]">Free consulting</h4>
+                <p class="font-medium md:text-[18px]">+234 8163 266 658</p>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="primary-button md:w-full">
+              <a href="">Get Property</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About houseplug -->
+      <section class="about-houseplug-section w-full h-auto flex flex-col justify-center items-center gap-2 px-4 py-8 md:flex-col md:justify-start md:items-start md:gap-8 md:px-8 md:py-8 lg:px-[100px] lg:flex-row lg:justify-between lg:items-center lg:gap-8">
+        <div class="houseplug-text w-full h-auto flex flex-col justify-center items-center gap-2 md:justify-start md:items-start lg:w-[47%]">
+          <h3 class="font-bold text-2xl md:text-3xl lg:text-6xl">About <span class="text-mainSecondary-400">HOUSEPLUG</span></h3>
+          <p class="font-normal text-[16px] text-center md:text-start md:text-[24px] md:leading-12">
+            We are a trusted real estate agency dedicated to connecting property
+            buyers, sellers, landlords, and tenants through a transparent and
+            secure platform. Our goal is to make every real estate transaction
+            safe, simple, and fair. With our verified escrow-style payment
+            system, funds remain protected until both parties confirm
+            satisfaction eliminating fraudulent transactions and ensuring peace
+            of mind. Whether you’re buying, selling, or renting, we make sure
+            your experience is seamless and trustworthy from start to finish.
+          </p>
+        </div>
+
+        <img src="/src/images/about-us.jpg" alt="" class="rounded-lg lg:w-[48%] lg:h-[600px] object-contain flex flex-grow-0"/>
+      </section>
+
+      <!-- Meet the team -->
+      <section class="meet-team-section w-full h-auto flex flex-col justify-center items-center gap-8 px-4 py-12 md:px-8 md:py-12 lg:px-[100px]">
+        <!-- header -->
+        <div class="section-head w-full h-auto flex flex-col justify-center items-center gap-2 md:justify-center md:items-center">
+          <h3 class="font-bold text-3xl md:text-5xl">Meet the Team</h3>
+          <p class="font-normal text-[16px] md:text-[18px]">Meet the creative minds behind the brand</p>
+        </div>
+
+        <!-- team cards -->
+        <div class="team-cards-container w-full h-auto flex flex-row justify-between items-center gap-4 overflow-x-auto md:overflow-x-visible scroll-smooth snap-x snap-mandatory scrollbar-hide touch-auto">
+          <div class="team-card flex-shrink-0 px-4 py-4 w-[300px] h-[400px] bg-card-image1 bg-cover bg-center object-fill rounded-lg flex flex-col justify-end items-start md:w-[33%] md:px-4  md:bg-top md:bg-no-repeat lg:bg-cover lg:h-[600px] snap-center">
+            <div class="member-details text-slate-800 bg-white-50 w-full rounded-lg p-4 flex flex-row justify-between items-center shadow-md">
+              <div class="name-and-role w-fit h-auto">
+                <h3 class="font-bold text-[18px] md:text-[14px] lg:text-[24px]">Jonathan Joseph</h3>
+                <p class="md:text-[12px] lg:text-[16px]">Lead Designer</p>
+              </div>
+
+              <div class="icon-container hover:border-2 cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="team-card px-4 py-4 w-[300px] h-[400px] bg-card-image1 bg-cover bg-center object-fill rounded-lg flex flex-shrink-0 flex-col justify-end items-start md:w-[33%] md:px-4  md:bg-top md:bg-no-repeat lg:h-[600px] snap-center">
+            <div class="member-details text-slate-800 bg-white-50 w-full rounded-lg p-4 flex flex-row justify-between items-center shadow-md">
+              <div class="name-and-role w-fit h-auto">
+                <h3 class="font-bold text-[18px] md:text-[14px] lg:text-[24px]">Jonathan Joseph</h3>
+                <p class="lg:text-16px md:text-[12px] lg:text-[16px]">Lead Designer</p>
+              </div>
+
+              <div class="icon-container hover:border-2 cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+
+         <div class="team-card px-4 py-4 w-[300px] h-[400px] bg-card-image1 bg-cover bg-center object-fill rounded-lg flex flex-shrink-0 flex-col justify-end items-start md:w-[33%] md:px-4  md:bg-top md:bg-no-repeat lg:h-[600px] snap-center">
+            <div class="member-details text-slate-800 bg-white-50 w-full rounded-lg p-4 flex flex-row justify-between items-center shadow-md">
+              <div class="name-and-role w-fit h-auto">
+                <h3 class="font-bold text-[18px] md:text-[14px] lg:text-[24px]">Jonathan Joseph</h3>
+                <p class="md:text-[12px] lg:text-[16px]">Lead Designer</p>
+              </div>
+
+              <div class="icon-container hover:border-2 cursor-pointer">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
 
       <!-- Call to action section -->
+      <section class="about-cta-section">
+        <div class="cta-text">
+          <h3>Do you want to buy or sell your property ?</h3>
+          <p>Contact us and list your property here</p>
+        </div>
+
+        <div class="primary-button">
+          <a href="#">Contact us</a>
+        </div>
+      </section>
+
+      <!-- Brands section -->
+      <section class="brands-section">
+        <div class="section-top">
+          <h3>Trusted by Leading Real Estate Partners</h3>
+          <p>
+            We’re proud to have earned the trust of respected developers,
+            property owners, and corporate clients. Their confidence in our
+            service reflects our commitment to excellence and lasting
+            relationships.
+          </p>
+        </div>
+
+        <div class="brands-container">
+          <img src="/src/images/brands/brand-1.png" alt="" />
+          <img src="/src/images/brands/brand-2.png" alt="" />
+          <img src="/src/images/brands/brand-3.png" alt="" />
+          <img src="/src/images/brands/brand-4.png" alt="" />
+          <img src="/src/images/brands/brand-5.png" alt="" />
+          <img src="/src/images/brands/brand-6.png" alt="" />
+        </div>
+      </section>
 
       <!-- Footer Section -->
       <section
