@@ -18,24 +18,88 @@ closeIcon.addEventListener("click", () => {
   }, 300);
 });
 
-// Display modal for property filter
-const searchInput = document.getElementById("search-input");
-const modal = document.getElementById("property-filter-modal");
 
-// Show modal on click
-searchInput.addEventListener("click", () => {
-  modal.classList.remove("hidden");
-  modal.classList.add("flex");
+
+// ===== PROPERTY FILTER MODAL =====
+ const searchInput = document.getElementById("search-input");
+ const filterModal = document.getElementById("property-filter-modal");
+
+  // Open modal when clicking the search input
+  searchInput.addEventListener("click", () => {
+    filterModal.classList.remove("hidden");
+  });
+
+  // Close modal when clicking outside
+  document.addEventListener("click", (e) => {
+    const clickedInsideModal = filterModal.contains(e.target);
+    const clickedInput = searchInput.contains(e.target);
+
+    if (!clickedInsideModal && !clickedInput) {
+      filterModal.classList.add("hidden");
+    }
+  });
+
+
+
+
+
+// ===== SELECT ELEMENTS =====
+const imageViewer = document.getElementById("imageViewer");
+const viewerImage = document.querySelector("#viewer-image img");
+const closeBtn = document.getElementById("close-btn");
+
+const prevBtn = document.getElementById("prev-image");
+const nextBtn = document.getElementById("next-image");
+
+// All gallery images (main + grid)
+const galleryImages = document.querySelectorAll(".gallery-image");
+
+// To keep track of which image is currently displayed
+let currentIndex = 0;
+
+// ===== OPEN VIEWER =====
+galleryImages.forEach((img, index) => {
+  img.addEventListener("click", () => {
+    currentIndex = index; // Save clicked index
+    openViewer();
+  });
 });
 
-// hide modal when clicking outside
-document.addEventListener("click", () => {
-  const isClickInside =
-    modal.contains(event.target) || searchInput.contains(event.target);
-  if (!isClickInside) {
-    modal.classList.remove("flex");
-    modal.classList.add("hidden");
-  }
-});
-console.log("JavaScript is working!");
+// Function to open viewer
+function openViewer() {
+  viewerImage.src = galleryImages[currentIndex].src; // set image
+  imageViewer.classList.remove("hidden"); // show fullscreen
+}
 
+// ===== CLOSE VIEWER =====
+closeBtn.addEventListener("click", () => {
+  imageViewer.classList.add("hidden");
+});
+
+// ===== NEXT IMAGE =====
+nextBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % galleryImages.length; 
+  viewerImage.src = galleryImages[currentIndex].src;
+});
+
+// ===== PREVIOUS IMAGE =====
+prevBtn.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  viewerImage.src = galleryImages[currentIndex].src;
+});
+
+
+
+// const options = document.querySelectorAll(".option");
+
+//   options.forEach(option => {
+//     option.addEventListener("click", () => {
+//       // Remove active class from all
+//       options.forEach(opt => opt.classList.remove("active-option", "bg-mainSecondary-500", "text-white"));
+//       opt.classList.add("bg-white");
+
+//       // Add active class to clicked
+//       option.classList.add("active-option", "bg-mainSecondary-500", "text-white");
+//       option.classList.remove("bg-white");
+//     });
+//   });

@@ -97,7 +97,7 @@
 
       <!-- Navigation -->
       <div
-        class="main-nav bg-transparent w-full h-auto px-4 py-20 flex flex-row justify-between items-center gap-6 lg:px-28 md:px-8"
+        class="main-nav bg-transparent w-full h-auto px-4 pt-20 pb-4 flex flex-row justify-between items-center gap-6 lg:px-28 md:px-8"
       >
         <div
           class="desktop-nav w-full h-auto flex flex-row justify-between items-center"
@@ -199,9 +199,753 @@
       </div>
 
       <!-- Hero Section -->
+       <section
+        class="about-hero bg-about-hero bg-no-repeat bg-cover py-10 text-white-50 w-full h-auto px-4 flex flex-col justify-center items-center gap-4 md:py-32"
+      >
+        <!-- Hero Text -->
+        <div
+          class="about-hero-text w-full h-auto flex flex-col justify-center items-center gap-4"
+        >
+          <h1 class="text-3xl font-bold md:text-4xl w-full text-center">
+            Your Reliable Ally in Worldwide <span class="text-mainSecondary-400">Real Estate</span>
+          </h1>
+          <p class="font-normal text-base md:text-2xl">
+            Get to know more about HOUSEPLUG
+          </p>
+        </div>
 
-      <!-- Properties Section  -->
+        <!-- Buttons -->
+        <div
+          class="about-buttons-container w-full h-auto flex flex-col justify-center items-center gap-4 md:flex-row"
+        >
+          <div class="secondary-button">
+            <a href="contact.html">Contact us</a>
+          </div>
 
+          <div class="primary-button">
+            <a href="listed-properties.html">Get Property</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Properties search section  -->
+       <section class="properties-search-section w-full h-auto px-4 py-8 lg:px-28 md:px-8">
+
+          <!-- Wrapper that handles the open/close behavior -->
+          <div class="relative w-full flex flex-col justify-start items-start gap-1 ">
+
+            <!-- Search box for small screens -->
+            <input
+              type="search"
+              name="search"
+              id="search-input"
+              placeholder="Search for location, property type, price range etc."
+              class="search-input w-full h-12 px-2 py-2 border border-gray-300 rounded-lg 
+                    focus:outline-none focus:ring-2 focus:ring-mainSecondary-400 
+                    focus:border-transparent lg:hidden"
+            />
+
+            <!-- Property filter modal -->
+            <div
+              class="hero-search-property absolute top-14 left-0 w-full h-auto hidden 
+                     flex-col justify-start items-start rounded-lg overflow-hidden 
+                      z-50 md:top-2 lg:flex md:relative lg:relative"
+                    id="property-filter-modal"
+            >
+
+              <!-- Top Tabs -->
+              <div
+                class="top-options w-full h-auto flex flex-row justify-start items-start gap-0 px-0
+                      md:flex lg:flex md:justify-start md:w-fit bg-slate-50 rounded-tr-lg rounded-lr-lg"
+              >
+                <div
+                  class="option-buy active-option w-[50%] bg-mainSecondary-400 px-12 py-3 cursor-pointer hover:bg-mainSecondary-200 
+                        active:bg-mainSecondary-600 focus:bg-mainSecondary-500 text-center rounded-tl-lg 
+                        md:text-start md:w-fit"
+                >
+                  <h4 class="text-[18px] font-medium">Buy</h4>
+                </div>
+
+                <div
+                  class="option-rent w-[50%] bg-white px-12 py-3 cursor-pointer hover:bg-mainSecondary-200
+                  hover:rounded-tr-lg focus:bg-mainSecondary-500
+                        text-center md:text-start md:w-fit"
+                >
+                  <h4 class="text-[18px] font-medium">Rent</h4>
+                </div>
+
+                <!-- <div
+                  class="option-sell w-1/3 bg-white px-5 py-3 cursor-pointer hover:bg-mainSecondary-400 
+                        text-center rounded-tr-lg md:text-start md:w-fit"
+                >
+                  <h4 class="text-[18px] font-medium">Sell</h4>
+                </div> -->
+              </div>
+
+              <!-- Filter Form -->
+              <div
+                class="search-property-form w-full h-auto flex flex-col justify-start items-start 
+                      gap-4 bg-slate-50 px-4 py-4 shadow-md md:flex md:flex-row md:justify-between 
+                      md:items-end md:gap-4 lg:gap-4 lg:px-6 lg:py-8"
+              >
+                <!-- Location -->
+                <div class="location flex flex-col justify-start items-start w-full md:w-full gap-2 relative">
+                  <label for="location" class="font-medium">Location</label>
+                  <select
+                    name="location"
+                    id="location"
+                    class="w-full md:w-full appearance-none p-4 border border-gray-300 rounded-lg 
+                          focus:outline-none focus:ring-2 focus:ring-mainSecondary-400 
+                          focus:border-transparent"
+                  >
+                    <option value="lagos">Lagos</option>
+                    <option value="abuja">Abuja</option>
+                    <option value="port-harcourt">Port Harcourt</option>
+                    <option value="calabar">Calabar</option>
+                    <option value="enugu">Enugu</option>
+                    <option value="owerri">Owerri</option>
+                    <option value="ibadan">Ibadan</option>
+                    <option value="kano">Kano</option>
+                    <option value="kaduna">Kaduna</option>
+                    <option value="jos">Jos</option>
+                    <option value="benin-city">Benin City</option>
+                    <option value="asaba">Asaba</option>
+                    <option value="umuaahia">Umuaahia</option>
+                    <option value="akwa-ibom">Akwa Ibom</option>
+                    <option value="akwa">Akwa</option>
+                  </select>
+
+                  <div class="select-icon-container absolute top-12 right-4 pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  </svg>
+
+                  </div>
+                </div>
+
+                <!-- House Type -->
+                <div class="House-type flex flex-col justify-start items-start w-full md:w-full gap-2 relative">
+                  <label for="house-type" class="font-medium">House type</label>
+                  <select
+                    name="house-type"
+                    id="house-type"
+                    class="w-full appearance-none md:w-full p-4  border border-gray-300 rounded-lg 
+                          focus:outline-none focus:ring-2 focus:ring-mainSecondary-400 
+                          focus:border-transparent"
+                  >
+                    <option value="apartment">Apartment</option>
+                    <option value="duplex">Duplex</option>
+                    <option value="flat">Flat</option>
+                    <option value="self-contain">Self Contain</option>
+                    <option value="mini-flat">Mini Flat</option>
+                    <option value="office-space">Office Space</option>
+                    <option value="shop">Shop</option>
+                    <option value="land">Land</option>
+                  </select>
+
+                  <div class="select-icon-container absolute top-12 right-4 pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  </svg>
+
+                  </div>
+                </div>
+
+                <!-- Price Range -->
+                <div class="Price-range flex flex-col justify-start items-start w-full md:w-full gap-2 relative">
+                  <label for="price-range" class="font-medium">Price range</label>
+                  <select
+                    name="price-range"
+                    id="price-range"
+                    class="w-full appearance-none md:w-full p-4 border border-gray-300 rounded-lg 
+                          focus:outline-none focus:ring-2 focus:ring-mainSecondary-400 
+                          focus:border-transparent"
+                  >
+                    <option value="0-50000">0 - 50,000</option>
+                    <option value="50000-100000">50,000 - 100,000</option>
+                    <option value="100000-200000">100,000 - 200,000</option>
+                    <option value="200000-500000">200,000 - 500,000</option>
+                    <option value="500000-1000000">500,000 - 1,000,000</option>
+                    <option value="1000000+">1,000,000+</option>
+                  </select>
+
+                  <div class="select-icon-container absolute top-12 right-4 pointer-events-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                  </svg>
+
+                  </div>
+                </div>
+
+                <!-- Search Icon (hidden on mobile) -->
+                <div class="icon-container-search lg:flex md:flex flex-row justify-center 
+                            items-center bg-mainSecondary-400 p-4 rounded-lg hidden cursor-pointer"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="m21 21-5.197-5.197m0 0
+                            A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0
+                            10.607 10.607Z"/>
+                  </svg>
+                </div>
+
+                <!-- Mobile Search Button -->
+                <div class="button-primary w-full lg:hidden md:hidden">
+                  <button
+                    class="search-button w-full bg-accent-400 text-white px-6 py-3 rounded-lg 
+                          hover:bg-accent-300"
+                  >
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+       <!-- Properties Section -->
+        <section
+        class="properties-cards-section w-full h-auto px-4 py-3 flex flex-col justify-start items-center gap-12 sm:px-4 md:px-8 md:py-8 lg:px-[100px]"
+      >
+        <!-- <div class="section-header">
+          <h2 class="font-bold text-2xl">Featured properties</h2>
+        </div> -->
+
+        <div
+          class="properties-cards-container w-full h-auto flex flex-col justify-start items-start gap-4 md:flex md:flex-row md:flex-wrap md:justify-between md:gap-4 lg:flex lg:flex-row lg:flex-wrap"
+          id="properties-cards-container"
+        >
+          <!-- Property cards will be dynamically inserted here -->
+          <!-- feature card -->
+           
+          <div
+            class="feature-card w-full h-auto p-4 flex flex-col justify-start items-start rounded-lg overflow-hidden shadow-md bg-white-100 md:w-[48%] lg:w-[31%]"
+          >
+            <div
+              class="feature-card-image relative w-full h-56 overflow-hidden rounded-md"
+            >
+              <img
+                src="images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg"
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="chip absolute top-6 left-6 bg-mainSecondary-400 text-white-100 px-3 py-1 rounded-lg text-[16px] md:text-[16px] font-medium"
+              >
+                <span>Featured</span>
+              </div>
+            </div>
+
+            <div
+              class="feature-card-details w-full h-auto mt-4 flex flex-col justify-start items-start gap-2 px-2"
+            >
+              <div
+                class="property-loaction w-full h-auto flex flex-row justify-start items-center gap-2 text-gray-800"
+              >
+                <div class="icon-container text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
+                </div>
+                <span class="font-medium text-[12px] md:text-[16px]"
+                  >Lugbe District 4, Abuja</span
+                >
+              </div>
+
+              <h1 class="font-bold text-[16px] md:text-[18px]">
+                Super Delux Bex Room With swimming pool
+              </h1>
+
+              <div
+                class="property-amenities w-full h-auto flex flex-row justify-start items-center gap-6 border-b-2 pb-8 text-gray-600"
+              >
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">6</span> bedrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">4</span> bathrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">1,456</span> Sqm
+                </h4>
+              </div>
+
+              <div
+                class="property-price w-full h-auto flex flex-row justify-between items-center"
+              >
+                <h2
+                  class="font-bold text-2xl md:text-3xl text-mainSecondary-400"
+                >
+                  N45M
+                </h2>
+
+                <a href="./propertiesDetails/Super-Delux-Rm-swim-pool.html"><button
+                  class="view-details-button bg-mainSecondary-400 px-4 py-4 rounded-lg w-fit h-auto hover:bg-mainSecondary-300 cursor-pointer font-medium text-[14px] md:text-[18px]"
+                >
+                  View details
+                </button></a>
+              </div>
+            </div>
+          </div>
+
+          
+          <div
+            class="feature-card w-full h-auto p-4 flex flex-col justify-start items-start rounded-lg overflow-hidden shadow-md bg-white-100 md:w-[48%] lg:w-[31%]"
+          >
+            <div
+              class="feature-card-image relative w-full h-56 overflow-hidden rounded-md"
+            >
+              <img
+                src="images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg"
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="chip absolute top-6 left-6 bg-mainSecondary-400 text-white-100 px-3 py-1 rounded-lg text-[16px] md:text-[16px] font-medium"
+              >
+                <span>Featured</span>
+              </div>
+            </div>
+
+            <div
+              class="feature-card-details w-full h-auto mt-4 flex flex-col justify-start items-start gap-2 px-2"
+            >
+              <div
+                class="property-loaction w-full h-auto flex flex-row justify-start items-center gap-2 text-gray-800"
+              >
+                <div class="icon-container text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
+                </div>
+                <span class="font-medium text-[12px] md:text-[16px]"
+                  >Lugbe District 4, Abuja</span
+                >
+              </div>
+
+              <h1 class="font-bold text-[16px] md:text-[18px]">
+                Super Delux Bex Room With swimming pool
+              </h1>
+
+              <div
+                class="property-amenities w-full h-auto flex flex-row justify-start items-center gap-6 border-b-2 pb-8 text-gray-600"
+              >
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">6</span> bedrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">4</span> bathrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">1,456</span> Sqm
+                </h4>
+              </div>
+
+              <div
+                class="property-price w-full h-auto flex flex-row justify-between items-center"
+              >
+                <h2
+                  class="font-bold text-2xl md:text-3xl text-mainSecondary-400"
+                >
+                  N45M
+                </h2>
+
+                <a href="./propertiesDetails/Super-Delux-Rm-swim-pool.html"><button
+                  class="view-details-button bg-mainSecondary-400 px-4 py-4 rounded-lg w-fit h-auto hover:bg-mainSecondary-300 cursor-pointer font-medium text-[14px] md:text-[18px]"
+                >
+                  View details
+                </button></a>
+              </div>
+            </div>
+          </div>
+
+
+          <div
+            class="feature-card w-full h-auto p-4 flex flex-col justify-start items-start rounded-lg overflow-hidden shadow-md bg-white-100 md:w-[48%] lg:w-[31%]"
+          >
+            <div
+              class="feature-card-image relative w-full h-56 overflow-hidden rounded-md"
+            >
+              <img
+                src="images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg"
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="chip absolute top-6 left-6 bg-mainSecondary-400 text-white-100 px-3 py-1 rounded-lg text-[16px] md:text-[16px] font-medium"
+              >
+                <span>Featured</span>
+              </div>
+            </div>
+
+            <div
+              class="feature-card-details w-full h-auto mt-4 flex flex-col justify-start items-start gap-2 px-2"
+            >
+              <div
+                class="property-loaction w-full h-auto flex flex-row justify-start items-center gap-2 text-gray-800"
+              >
+                <div class="icon-container text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
+                </div>
+                <span class="font-medium text-[12px] md:text-[16px]"
+                  >Lugbe District 4, Abuja</span
+                >
+              </div>
+
+              <h1 class="font-bold text-[16px] md:text-[18px]">
+                Super Delux Bex Room With swimming pool
+              </h1>
+
+              <div
+                class="property-amenities w-full h-auto flex flex-row justify-start items-center gap-6 border-b-2 pb-8 text-gray-600"
+              >
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">6</span> bedrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">4</span> bathrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">1,456</span> Sqm
+                </h4>
+              </div>
+
+              <div
+                class="property-price w-full h-auto flex flex-row justify-between items-center"
+              >
+                <h2
+                  class="font-bold text-2xl md:text-3xl text-mainSecondary-400"
+                >
+                  N45M
+                </h2>
+
+                <a href="./propertiesDetails/Super-Delux-Rm-swim-pool.html"><button
+                  class="view-details-button bg-mainSecondary-400 px-4 py-4 rounded-lg w-fit h-auto hover:bg-mainSecondary-300 cursor-pointer font-medium text-[14px] md:text-[18px]"
+                >
+                  View details
+                </button></a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="feature-card w-full h-auto p-4 flex flex-col justify-start items-start rounded-lg overflow-hidden shadow-md bg-white-100 md:w-[48%] lg:w-[31%]"
+          >
+            <div
+              class="feature-card-image relative w-full h-56 overflow-hidden rounded-md"
+            >
+              <img
+                src="images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg"
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="chip absolute top-6 left-6 bg-mainSecondary-400 text-white-100 px-3 py-1 rounded-lg text-[16px] md:text-[16px] font-medium"
+              >
+                <span>Featured</span>
+              </div>
+            </div>
+
+            <div
+              class="feature-card-details w-full h-auto mt-4 flex flex-col justify-start items-start gap-2 px-2"
+            >
+              <div
+                class="property-loaction w-full h-auto flex flex-row justify-start items-center gap-2 text-gray-800"
+              >
+                <div class="icon-container text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
+                </div>
+                <span class="font-medium text-[12px] md:text-[16px]"
+                  >Lugbe District 4, Abuja</span
+                >
+              </div>
+
+              <h1 class="font-bold text-[16px] md:text-[18px]">
+                Super Delux Bex Room With swimming pool
+              </h1>
+
+              <div
+                class="property-amenities w-full h-auto flex flex-row justify-start items-center gap-6 border-b-2 pb-8 text-gray-600"
+              >
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">6</span> bedrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">4</span> bathrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">1,456</span> Sqm
+                </h4>
+              </div>
+
+              <div
+                class="property-price w-full h-auto flex flex-row justify-between items-center"
+              >
+                <h2
+                  class="font-bold text-2xl md:text-3xl text-mainSecondary-400"
+                >
+                  N45M
+                </h2>
+
+                <a href="./propertiesDetails/Super-Delux-Rm-swim-pool.html"><button
+                  class="view-details-button bg-mainSecondary-400 px-4 py-4 rounded-lg w-fit h-auto hover:bg-mainSecondary-300 cursor-pointer font-medium text-[14px] md:text-[18px]"
+                >
+                  View details
+                </button></a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="feature-card w-full h-auto p-4 flex flex-col justify-start items-start rounded-lg overflow-hidden shadow-md bg-white-100 md:w-[48%] lg:w-[31%]"
+          >
+            <div
+              class="feature-card-image relative w-full h-56 overflow-hidden rounded-md"
+            >
+              <img
+                src="images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg"
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="chip absolute top-6 left-6 bg-mainSecondary-400 text-white-100 px-3 py-1 rounded-lg text-[16px] md:text-[16px] font-medium"
+              >
+                <span>Featured</span>
+              </div>
+            </div>
+
+            <div
+              class="feature-card-details w-full h-auto mt-4 flex flex-col justify-start items-start gap-2 px-2"
+            >
+              <div
+                class="property-loaction w-full h-auto flex flex-row justify-start items-center gap-2 text-gray-800"
+              >
+                <div class="icon-container text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
+                </div>
+                <span class="font-medium text-[12px] md:text-[16px]"
+                  >Lugbe District 4, Abuja</span
+                >
+              </div>
+
+              <h1 class="font-bold text-[16px] md:text-[18px]">
+                Super Delux Bex Room With swimming pool
+              </h1>
+
+              <div
+                class="property-amenities w-full h-auto flex flex-row justify-start items-center gap-6 border-b-2 pb-8 text-gray-600"
+              >
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">6</span> bedrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">4</span> bathrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">1,456</span> Sqm
+                </h4>
+              </div>
+
+              <div
+                class="property-price w-full h-auto flex flex-row justify-between items-center"
+              >
+                <h2
+                  class="font-bold text-2xl md:text-3xl text-mainSecondary-400"
+                >
+                  N45M
+                </h2>
+
+                <a href="./propertiesDetails/Super-Delux-Rm-swim-pool.html"><button
+                  class="view-details-button bg-mainSecondary-400 px-4 py-4 rounded-lg w-fit h-auto hover:bg-mainSecondary-300 cursor-pointer font-medium text-[14px] md:text-[18px]"
+                >
+                  View details
+                </button></a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="feature-card w-full h-auto p-4 flex flex-col justify-start items-start rounded-lg overflow-hidden shadow-md bg-white-100 md:w-[48%] lg:w-[31%]"
+          >
+          
+            <div
+              class="feature-card-image relative w-full h-56 overflow-hidden rounded-md"
+            >
+              <img
+                src="images/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg"
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="chip absolute top-6 left-6 bg-mainSecondary-400 text-white-100 px-3 py-1 rounded-lg text-[16px] md:text-[16px] font-medium"
+              >
+                <span>Featured</span>
+              </div>
+            </div>
+
+            <div
+              class="feature-card-details w-full h-auto mt-4 flex flex-col justify-start items-start gap-2 px-2"
+            >
+              <div
+                class="property-loaction w-full h-auto flex flex-row justify-start items-center gap-2 text-gray-800"
+              >
+                <div class="icon-container text-sm">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
+                </div>
+                <span class="font-medium text-[12px] md:text-[16px]"
+                  >Lugbe District 4, Abuja</span
+                >
+              </div>
+
+              <h1 class="font-bold text-[16px] md:text-[18px]">
+                Super Delux Bex Room With swimming pool
+              </h1>
+
+              <div
+                class="property-amenities w-full h-auto flex flex-row justify-start items-center gap-6 border-b-2 pb-8 text-gray-600"
+              >
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">6</span> bedrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">4</span> bathrooms
+                </h4>
+                <h4 class="text-[14px] md:text-[16px] font-medium">
+                  <span class="font-bold">1,456</span> Sqm
+                </h4>
+              </div>
+
+              <div
+                class="property-price w-full h-auto flex flex-row justify-between items-center"
+              >
+                <h2
+                  class="font-bold text-2xl md:text-3xl text-mainSecondary-400"
+                >
+                  N45M
+                </h2>
+
+                <a href="./propertiesDetails/Super-Delux-Rm-swim-pool.html"><button
+                  class="view-details-button bg-mainSecondary-400 px-4 py-4 rounded-lg w-fit h-auto hover:bg-mainSecondary-300 cursor-pointer font-medium text-[14px] md:text-[18px]"
+                >
+                  View details
+                </button></a>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <!-- <div
+          class=" w-full mb-12 md:w-fit flex justify-center items-center text-center"
+        >
+          <a
+            href="listed-properties.html"
+            class=" primary-button w-full h-auto bg-mainSecondary-400 px-8 py-4 rounded-lg hover:bg-mainSecondary-300 hover:px-12 font-medium transition-all delay-75 ease-in"
+            >View all properties</a
+          >
+        </div> -->
+      </section>
+       
       <!-- Pagination -->
       <div class="pagination flex justify-center items-center gap-2 p-16">
         <!-- Previous Button -->

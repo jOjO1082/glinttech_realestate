@@ -200,7 +200,7 @@
 
       <!-- Hero Section -->
       <section
-        class="about-hero bg-about-hero py-12 text-white-50 w-full h-auto px-4 flex flex-col justify-center items-center gap-8"
+        class="about-hero bg-about-hero bg-no-repeat bg-cover py-20 text-white-50 w-full h-auto px-4 flex flex-col justify-center items-center gap-8 md:py-52"
       >
         <!-- Hero Text -->
         <div
@@ -230,7 +230,7 @@
 
       <!-- About Discover Section  -->
       <section
-        class="discover-section w-full h-auto flex flex-col-reverse justify-center items-center gap-8 px-4 py-12 md:px-8 md:justify-start md:items-start lg:flex-row lg:px-[100px] lg:h-auto lg:items-stretch"
+        class="discover-section w-full h-auto flex flex-col-reverse justify-center items-center gap-8 px-4 py-12 md:px-8 md:justify-start md:items-start lg:flex-row lg:px-[100px] lg:py-[100px] lg:h-auto lg:items-stretch"
       >
         <!-- Discover images -->
         <div
@@ -498,11 +498,11 @@
           </p>
         </div>
 
-        <img src="./images/about-us.jpg" alt="" class="rounded-lg lg:w-[48%] lg:h-[600px] object-contain flex flex-grow-0"/>
+        <img src="./images/about-us.jpg" alt="" class="rounded-lg lg:w-[48%] lg:h-[600px] object-contain flex flex-grow-0 md:rounded-lg lg:rounded-[50px]"/>
       </section>
 
       <!-- Meet the team -->
-      <section class="meet-team-section w-full h-auto flex flex-col justify-center items-center gap-8 px-4 py-12 md:px-8 md:py-12 lg:px-[100px]">
+      <section class="meet-team-section w-full h-auto flex flex-col justify-center items-center gap-8 px-4 py-12 md:px-8 md:py-20 lg:px-[100px]">
         <!-- header -->
         <div class="section-head w-full h-auto flex flex-col justify-center items-center gap-2 md:justify-center md:items-center">
           <h3 class="font-bold text-3xl md:text-5xl">Meet the Team</h3>
@@ -594,22 +594,22 @@
       </section>
 
       <!-- Call to action section -->
-      <section class="about-cta-section">
-        <div class="cta-text">
-          <h3>Do you want to buy or sell your property ?</h3>
+      <section class="about-cta-section bg-slate-900 w-full h-auto py-4  px-4 flex flex-col justify-start items-start gap-4 bg-black-900 sm:px-8 sm:py-8 sm:flex-row sm:justify-between md:items-center lg:px-[100px]">
+        <div class="cta-text text-white-50 w-full h-auto flex flex-col justify-center items-center gap-2 sm:justify-start sm:items-start sm:w-fit">
+          <h3 class="font-bold text-lg">Do you want to buy or sell your property ?</h3>
           <p>Contact us and list your property here</p>
         </div>
 
-        <div class="primary-button">
+        <div class="primary-button w-full h-auto sm:w-fit">
           <a href="#">Contact us</a>
         </div>
       </section>
 
       <!-- Brands section -->
-      <section class="brands-section">
-        <div class="section-top">
-          <h3>Trusted by Leading Real Estate Partners</h3>
-          <p>
+      <section class="brands-section w-full h-auto py-8 px-4 flex flex-col justify-center items-center gap-8 md:px-8 lg:px-[100px] lg:py-40">
+        <div class="section-top w-full h-auto flex flex-col justify-center items-center gap-2 md:justify-center md:items-center">
+          <h3 class="w-full h-auto font-bold text-2xl text-center">Trusted by Leading Real Estate Partners</h3>
+          <p class="text-center">
             We’re proud to have earned the trust of respected developers,
             property owners, and corporate clients. Their confidence in our
             service reflects our commitment to excellence and lasting
@@ -617,13 +617,14 @@
           </p>
         </div>
 
-        <div class="brands-container">
-          <img src="./images/brands/brand-1.png" alt="" />
-          <img src="./images/brands/brand-2.png" alt="" />
-          <img src="./images/brands/brand-3.png" alt="" />
-          <img src="./images/brands/brand-4.png" alt="" />
-          <img src="./images/brands/brand-5.png" alt="" />
-          <img src="./images/brands/brand-6.png" alt="" />
+        <div class="brands-container w-full h-auto flex flex-row justify-between items-center gap-4 overflow-x-auto md:overflow-x-hidden md:flex-wrap md:justify-center md:items-center scroll-smooth snap-x snap-mandatory scrollbar-hide touch-auto">
+
+          <img src="./images/brands/brand-1.png" alt="" class="w-[200px] h-[100px] rounded-lg"/>
+          <img src="./images/brands/brand-2.png" alt="" class="w-[200px] h-[100px] rounded-lg"/>
+          <img src="./images/brands/brand-3.png" alt="" class="w-[200px] h-[100px] rounded-lg"/>
+          <img src="./images/brands/brand-4.png" alt="" class="w-[200px] h-[100px] rounded-lg"/>
+          <img src="./images/brands/brand-5.png" alt="" class="w-[200px] h-[100px] rounded-lg"/>
+          <img src="./images/brands/brand-6.png" alt="" class="w-[200px] h-[100px] rounded-lg"/>
         </div>
       </section>
 
