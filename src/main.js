@@ -20,86 +20,89 @@ closeIcon.addEventListener("click", () => {
 
 
 
-// ===== PROPERTY FILTER MODAL =====
- const searchInput = document.getElementById("search-input");
- const filterModal = document.getElementById("property-filter-modal");
-
-  // Open modal when clicking the search input
-  searchInput.addEventListener("click", () => {
-    filterModal.classList.remove("hidden");
-  });
-
-  // Close modal when clicking outside
-  document.addEventListener("click", (e) => {
-    const clickedInsideModal = filterModal.contains(e.target);
-    const clickedInput = searchInput.contains(e.target);
-
-    if (!clickedInsideModal && !clickedInput) {
-      filterModal.classList.add("hidden");
-    }
-  });
 
 
 
+// ===== IMAGE VIEWER FUNCTIONALITY =====
 
-
-// ===== SELECT ELEMENTS =====
+// Select elements
+const galleryImages = document.querySelectorAll(".gallery-image");
 const imageViewer = document.getElementById("imageViewer");
 const viewerImage = document.querySelector("#viewer-image img");
 const closeBtn = document.getElementById("close-btn");
-
 const prevBtn = document.getElementById("prev-image");
 const nextBtn = document.getElementById("next-image");
+const currentIndexElem = document.getElementById("current-index");
+const totalImagesElem = document.getElementById("total-images");
+const thumbnailsContainer = document.querySelector(".thumbnails-container");
 
-// All gallery images (main + grid)
-const galleryImages = document.querySelectorAll(".gallery-image");
-
-// To keep track of which image is currently displayed
+// Store all image sources
+const images = Array.from(galleryImages).map(img => img.src);
 let currentIndex = 0;
 
-// ===== OPEN VIEWER =====
+// Update counter
+function updateCounter() {
+  currentIndexElem.textContent = currentIndex + 1;
+  totalImagesElem.textContent = images.length;
+}
+
+// Show image in fullscreen
+function showImage(index) {
+  currentIndex = index;
+  viewerImage.src = images[currentIndex];
+  updateCounter();
+  highlightThumbnail();
+}
+
+// Open fullscreen viewer
 galleryImages.forEach((img, index) => {
   img.addEventListener("click", () => {
-    currentIndex = index; // Save clicked index
-    openViewer();
+    showImage(index);
+    imageViewer.classList.remove("hidden");
   });
 });
 
-// Function to open viewer
-function openViewer() {
-  viewerImage.src = galleryImages[currentIndex].src; // set image
-  imageViewer.classList.remove("hidden"); // show fullscreen
-}
-
-// ===== CLOSE VIEWER =====
+// Close fullscreen viewer
 closeBtn.addEventListener("click", () => {
   imageViewer.classList.add("hidden");
 });
 
-// ===== NEXT IMAGE =====
+// Navigate next/prev
 nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % galleryImages.length; 
-  viewerImage.src = galleryImages[currentIndex].src;
+  showImage((currentIndex + 1) % images.length);
 });
 
-// ===== PREVIOUS IMAGE =====
 prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-  viewerImage.src = galleryImages[currentIndex].src;
+  showImage((currentIndex - 1 + images.length) % images.length);
 });
 
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+  if (!imageViewer.classList.contains("hidden")) {
+    if (e.key === "Escape") imageViewer.classList.add("hidden");
+    else if (e.key === "ArrowRight") showImage((currentIndex + 1) % images.length);
+    else if (e.key === "ArrowLeft") showImage((currentIndex - 1 + images.length) % images.length);
+  }
+});
 
+// Create thumbnail strip
+images.forEach((src, index) => {
+  const thumb = document.createElement("img");
+  thumb.src = src;
+  thumb.classList.add("w-16", "h-16", "object-cover", "rounded-lg", "cursor-pointer", "transition-all", "duration-300", "border-2");
+  thumb.addEventListener("click", () => showImage(index));
+  thumbnailsContainer.appendChild(thumb);
+});
 
-// const options = document.querySelectorAll(".option");
+// Highlight active thumbnail
+function highlightThumbnail() {
+  if (!thumbnailsContainer) return;
+  const thumbs = thumbnailsContainer.querySelectorAll("img");
+  thumbs.forEach((t, i) => {
+    t.classList.toggle("border-white", i === currentIndex);
+    t.classList.toggle("opacity-50", i !== currentIndex);
+  });
+}
 
-//   options.forEach(option => {
-//     option.addEventListener("click", () => {
-//       // Remove active class from all
-//       options.forEach(opt => opt.classList.remove("active-option", "bg-mainSecondary-500", "text-white"));
-//       opt.classList.add("bg-white");
-
-//       // Add active class to clicked
-//       option.classList.add("active-option", "bg-mainSecondary-500", "text-white");
-//       option.classList.remove("bg-white");
-//     });
-//   });
+// Initialize
+updateCounter();
