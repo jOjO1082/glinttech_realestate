@@ -247,7 +247,7 @@
 
             <!-- Property filter modal -->
             <div
-              class="hero-search-property absolute top-14 left-0 w-full h-auto hidden 
+              class="hero-search-property shadow-xl absolute top-14 left-0 w-full h-auto hidden 
                      flex-col justify-start items-start rounded-lg overflow-hidden 
                       z-50 md:top-2 lg:flex md:relative lg:relative"
                     id="property-filter-modal"
@@ -298,6 +298,7 @@
                           focus:outline-none focus:ring-2 focus:ring-mainSecondary-400 
                           focus:border-transparent"
                   >
+                    <option value="">All locations</option>
                     <option value="lagos">Lagos</option>
                     <option value="abuja">Abuja</option>
                     <option value="port-harcourt">Port Harcourt</option>
@@ -1193,7 +1194,12 @@
       </section>
     </div>
 
-    <script src="./main.js"></script>
+    <script src="../src/propertiesData.js"></script>
+    <script src="./renderproperties.js"></script>
     <script src="./inputscript.js"></script>
+    <script src="./main.js"></script>
+
+    
+    
   </body>
 </html>
